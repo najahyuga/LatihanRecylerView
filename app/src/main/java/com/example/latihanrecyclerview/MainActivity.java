@@ -73,8 +73,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.all_barang = new ArrayList<Barang>();
-        all_barang.add(new Barang("Air", 2000, 10));
-        all_barang.add(new Barang("Snack", 1000, 5));
+        all_barang.add(new Barang("Air", 2_000, 10));
+        all_barang.add(new Barang("S", 1, 1));
+        all_barang.add(new Barang("Sn", 10, 2));
+        all_barang.add(new Barang("Sna", 100, 3));
+        all_barang.add(new Barang("Snac", 1000, 4));
+        all_barang.add(new Barang("Snack", 10_000, 5));
+        all_barang.add(new Barang("Snack", 1000, 100));
         recyclerView = findViewById(R.id.recyclerView);
         BarangAdapter adapter = new BarangAdapter(this, this.all_barang);
         recyclerView.setAdapter(adapter);
